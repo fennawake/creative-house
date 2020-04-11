@@ -1,0 +1,38 @@
+{% extends "layout.html" %} {% block content %}
+
+<section id="intro">
+    <header>
+        <a href="/">
+            <img src="/img/logo-casa-criativa.png" alt="Casa Criativa Logotipo">
+        </a>
+    </header>
+
+    <main>
+        <p>
+            Ficar em casa em períodos longos, não é nada fácil.
+        </p>
+        <p>
+            Por isso, iremos catalogar idéias, <b>brincadeiras, jogos, filmes, livros, cursos, dicas</b> e tudo que for necessário para tornar esse momento mais interessante.
+        </p>
+        <p>
+            Comece clicando em ver idéias para ver quais idéias já foram cadastradas e contribua adicionando a sua idéia.
+        </p>
+    </main>
+
+    <section id="buttons">
+        <button onclick="onOff()">+ Adicionar Idéia</button>
+        <a href="/ideias" class="button">Ver Idéias</a>
+    </section>
+
+    <footer>
+        <p>
+            Com <span class="heart">❤</span> <a href="#">Fernando Souza</a>
+        </p>
+    </footer>
+</section>
+
+<section id="last-ideas">
+    {% include "allIdeas.html" %}
+</section>
+
+{% endblock %}
